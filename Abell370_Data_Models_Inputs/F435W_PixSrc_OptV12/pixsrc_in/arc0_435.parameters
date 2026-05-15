@@ -1,0 +1,57 @@
+#This is the .parameters file
+
+# Set coordinate system: reference point in degrees (J2000) and arcsecond offsets
+# Specify the point spread function (PSF): read from file
+# Set the 1-sigma of Gaussian noise in the data
+
+coorsys: J2000 39.97041667 -1.57680556 0 0
+psf:     1
+noise:   0.003
+debug: 0
+details: 0
+noisemap: 0
+images: 2
+#grid: 1 15
+
+# REGULARIZATION ADJUSTMENTS
+
+# REGULARIZATION FORM:
+# -1 penalize large sources
+# 0 large surface brightness sources
+# 1 large gradients of surface brightness
+# 2 large laplacians of surface brightness sources
+regorder:     2      # default 2
+
+# GUESS OR FIX STRENGTH:
+# 0 reg off
+# -<value> fix to positive <value> (small for stable off)
+# <value> initial guess is positive <value>
+regstrength:  1     # default 1
+
+# ACCURACY
+# 1 higher accuracy on (more computational effort)
+# 0 higher accuracy off
+regaccuracy:  0      # default 0
+
+# REG ON/OFF
+# 1 reg on (for stable off set to small number)
+# 0 reg off (strictly analytic sources)
+reg:          1      # default 1
+
+# HOW REG STRENGTH FOUND
+# 1 maximize evidence (faster)
+# 0 use derivative-based root finder (more robust)
+optfinder:    1      # default 1
+
+# CONVERGENCE CRITERION
+# <value> set strength to <value>
+regftol:      1e-3   # default 1e-3
+
+dataname: arc_source_435
+
+
+
+
+
+
+
